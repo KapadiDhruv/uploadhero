@@ -51,6 +51,9 @@ var upload = multer({
 app.get("/",function(req,res){
     res.render("Signup");
 })
+app.get("/a",function(req,res){
+    res.send("Signup");
+})
     
 app.post("/uploadProfilePicture",function (req, res, next) {
         
