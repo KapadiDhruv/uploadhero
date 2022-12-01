@@ -51,8 +51,14 @@ var upload = multer({
 app.get("/",function(req,res){
     res.render("Signup");
 })
-app.get("/a",function(req,res){
-    res.send("Signup");
+app.get("/download",function(req,res){
+
+    var filePath = "./uploads/mypic-1669909683997.jpg"; // Or format the path using the `id` rest param
+    var fileName = "report.jpg"; // The default name the browser will use
+
+    res.download(filePath, fileName);    
+
+
 })
     
 app.post("/uploadProfilePicture",function (req, res, next) {
